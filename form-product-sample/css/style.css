@@ -1,0 +1,9 @@
+/* 
+ * cssの編集は【不要】です。
+*/
+
+.feature-img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
