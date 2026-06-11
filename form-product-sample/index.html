@@ -10,35 +10,111 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
     <div class="container">
-      <!-- TODO: navbarコンテンツ -->
+      <a class="navbar-brand fw-bold" href="#">X-Games</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#features">特徴</a></li>
+          <li class="nav-item"><a class="nav-link" href="#details">仕様</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-3 mt-2 mt-lg-0" href="#reserve">先行予約</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <header class="bg-dark text-white text-center py-5">
     <div class="position-relative container py-5">
-      <!-- TODO: 背景画像(kv.jpg): 透過率25% -->
+      <div class="position-absolute top-0 start-0 w-100 h-100">
+        <img src="img/kv.jpg" alt="X-Games メイン画像" class="w-100 h-100 object-fit-cover opacity-25">
+      </div>
 
-      <!-- TODO: rowデータ。flexのセンタリング設定。col: mdサイズで8:4 -->
       <div class="row justify-content-center position-relative z-1">
+        <div class="col-md-8">
+          <h1 class="display-3 fw-bold mb-3">遊びの最前線</h1>
+          <p class="lead mb-4">宇宙1×AI!最新技術を搭載した映画で夢見たあのゲームが現実に。<br>限定特典付き先行予約を受付中!</p>
+          <a href="#reserve" class="btn btn-light btn-lg px-5 rounded-pill fw-bold">今すぐ先行予約</a>
+          <div class="mt-5">
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section id="features" class="py-5 bg-white">
     <div class="container py-4">
-      <!-- TODO: md以上で1:1になるように行列コンテンツを表示 -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/future01.jpg" alt="特徴1" class="img-fluid rounded feature-img shadow-sm">
+        </div>
+        <div class="col-md-6 ps-md-5">
+          <span class="badge bg-primary mb-2">FEATURE 01</span>
+          <h2 class="fw-bold mb-3">圧倒的な没入感</h2>
+          <p class="text-secondary">フルダイブ型VRシステムとARシステムを搭載。昔夢見た自分だけのアイテムを自由に作成。もう一つの本物の世界を体験できます。</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/future02.jpg" alt="特徴2" class="img-fluid rounded feature-img shadow-sm">
+        </div>
+        <div class="col-md-6 pe-md-5">
+          <span class="badge bg-primary mb-2">FEATURE 02</span>
+          <h2 class="fw-bold mb-3">安心・安全の保護機能搭載</h2>
+          <p class="text-secondary">従来より問題視されていたフルダイブ状態での健康問題を国内で初めて解決しました。</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <section id="reserve" class="py-5 bg-light border-top">
     <div class="container py-4" style="max-width: 720px;">
-      <!-- TODO: 予約フォームのレイアウト, 性・名はsmサイズで切り替え -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">先行予約フォーム</h2>
+        <p class="text-muted">必要事項をご記入の上、「予約する」ボタンを押してください。</p>
+      </div>
 
       <form class="needs-validation" novalidate>
-        <!-- TODO: フォーム部品 -->
+        <div class="row g-3">
+          
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label fw-bold">姓</label>
+            <input type="text" class="form-control" id="lastName" placeholder="山田" required>
+          </div>
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label fw-bold">名</label>
+            <input type="text" class="form-control" id="firstName" placeholder="太郎" required>
+          </div>
+
+          <div class="col-12">
+            <label for="email" class="form-label fw-bold">メールアドレス</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="col-12">
+            <label for="address" class="form-label fw-bold">お届け先住所</label>
+            <input type="text" class="form-control" id="address" placeholder="東京都渋谷区神南1-2-3" required>
+          </div>
+
+          <div class="col-12 my-4">
+            <label class="form-label fw-bold d-block">希望カラー</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="colorOptions" id="color1" value="black" checked>
+              <label class="form-check-input-label" for="color1">ブラックオパール</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="colorOptions" id="color2" value="white">
+              <label class="form-check-input-label" for="color2">プラチナホワイト</label>
+            </div>
+          </div>
+
+        </div>
 
         <hr class="my-4">
 
-        <!-- TODO: 確認ボタン -->
+        <button class="w-100 btn btn-primary btn-lg fw-bold py-3" type="submit">予約を確定する（確認画面へ）</button>
       </form>
     </div>
   </section>
